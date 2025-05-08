@@ -17,6 +17,7 @@ export const createUser = async (user: CreateUserParams) => {
   try {
     // we try to connect to our database
     await connectToDatabase();
+
     const newUser = await User.create(user);
     return JSON.parse(JSON.stringify(newUser));
   } catch (error) {

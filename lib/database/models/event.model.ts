@@ -13,7 +13,11 @@ export interface IEvent extends Document {
   isFree: boolean;
   url?: string;
   category: { _id: string; name: string }; // Reference to Category document
-  ornanizer: { _id: string; firstName: string; lastName: string }; // Reference to User document (Note: 'ornanizer' might be a typo, maybe you meant 'organizer')
+  ornanizer: {
+    _id: string;
+    firstName: string;
+    // lastName: string
+  }; // Reference to User document (Note: 'ornanizer' might be a typo, maybe you meant 'organizer')
 }
 
 const EventSchema = new Schema({
